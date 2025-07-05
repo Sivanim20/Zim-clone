@@ -1,6 +1,6 @@
 .img{
     width:100%;
-    height:700px;
+    height:auto;
     background-image: url("https://www.zim.com/assets/dakfozjo/zim-sammy-ofer_panama_wlu_desktop.webp");
     background-size: cover;
     background-position: center;
@@ -44,19 +44,7 @@ body{
     margin-top: 1rem;
     padding-right: 1rem;
 }
-.nav_button
-{
-    background-color: white;
-    height:40px;
-    border-radius: 10px;
-    width: 100%;
-    min-width: 100px;
-    font-size: 22px;
-    margin-right: unset;
-    padding: 5px 11px;
-    text-wrap: nowrap;
-    border-width: 0px;
-}
+
 .nav_button_text
 {
     padding-top: 20px;
@@ -200,40 +188,11 @@ body{
     margin-top: 15px;
     position: relative;
 }
-.zim_img
-{
-    object-fit: cover;
-    min-height: 650px;
-    min-width: 100%;
-    width: 100%;
-}
 .banner
 {
     position: absolute;
 }
-.title_banner_right
-{
-    background: white;
-    height: auto;
-    left: auto;
-    right: 0;
-    margin-right: 45px;
-    position: absolute;
-    top: unset;
-    transform: unset;
-    width: 450px;
-    z-index: auto;
-    text-align: right;
-    position: flex;
-    overflow: hidden;
-}
-.tab_right
-{
-    height: auto;
-    border-radius: 10px;
-    background-color: #fff;
-    display: flex;
-}
+
 .main_body
 {
     position: absolute;
@@ -254,34 +213,42 @@ body{
   margin-left: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#news_center
-{
-    height: 60px;
-    overflow: hidden;
-    display: block;
-    margin-top: -30px;
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap');
+
+.news-ticker {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: transparent;
+  padding: 15px 30px;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+  width:95%
 }
-.news_bar
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
-    background: #fff;
-    border-radius: 8px;
-    padding-left: 21px;
-    padding-right: 30px;
-    position: relative;
-    box-shadow: #64646f33 0 7px 29px;
-    width: 100%;
-    transition: height .3s;
-    overflow: hidden;
-    justify-content: space-between;
+
+.news-box {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  width:90%;
+  height: 100%;
 }
-.news_container
-{
-    border-top: unset;
-    
+
+.news-item {
+  height: 24px;
+  line-height: 24px;
+  white-space: nowrap;
+  color: #000;
+  width: 100%;
+}
+
+.date {
+  color: #1949b8;
+  font-weight: bold;
+  margin-right: 8px;
 }
 .card
 {
@@ -295,52 +262,235 @@ body{
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: 5px;
     margin: 0 26px;
-}
-.box_fig
-{
-    box-shadow: 0 4px 20px rgba(0, 0, 0, .15);
-    border-radius: 10px;
     overflow: hidden;
 }
-.card_img
-{
-    height: 347px;
-    width: 347px;
-    background-position: 50% 50%;
-    background-size: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    transition: all .9s ease-in .9s;
-    background-position: center;
-    position: absolute;
-}
 .card img:hover{
-    transform: scale(1.2);
-}
-.card_container
-{
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top:100px
+    transform: scale(1.1);
+    overflow: hidden;
 }
 .card{
     width:390px;
     background-color: #f0f0f0;
     border-radius: 8px;
-    overflow: hidden;
     margin: 20px;
     font-family: "Michroma",sans-serif;
 }
 .card img{
     width:100%;
-    height:342px;
-    background-position: 50% 50%;
-    background-size: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     transition: all .9s ease-in .9s;
     background-position: center;
     position: absolute;
+    overflow: hidden;
+}
+.wrapper {
+  margin-right: 20px;
+    width: 100%;
+    position: relative;
+}
+.wrapper i {
+    height: 50px;
+    width: 50px;
+    background: rgb(253, 253, 253);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25 rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+
+}
+
+.wrapper i:first-child {
+    left: 2px;
+
+}
+
+.wrapper i:last-child {
+    right: 2px;
+
+}
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+    
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+.card {
+    scroll-snap-align: start;
+    list-style: none;
+    background: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    width: 390px;
+    padding-bottom: 15px;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+@media screen and (max-width: 768px) {
+    .img {
+        background-image: url("https://www.zim.com/assets/24fh2xzd/zim-sammy-ofer_panama_wlu_mobile.webp");
+        height: auto; /* optional: adjust height based on content */
+        min-height: 710px;
+        background-position: top;
+        background-size: cover;
+    }
+    .nav_top,
+  .nav_list,
+  .nav_list_right {
+    display: none; /* Hides nav links on mobile */
+  }
+
+  .mobile-menu {
+    display: flex !important; /* Shows hamburger */
+    cursor: pointer;
+    padding: 15px;
+  }
+
+  .mobile-menu span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    display: block;
+  }
+  .mob_button_text
+  {
+    width: 100px;
+    height: 40px;
+    font-size: 50px;
+    position: absolute;
+    top: 30px;
+    right: 60px;
+  }
+  .mob_search
+  {
+    top:35px;
+    right:10px;
+    position: absolute;
+  }
+  .title_banner {
+    padding: 20px;
+    text-align: center;
+    height: auto;
+  }
+
+  .title_banner_text {
+    font-size: 35px;
+    line-height: 36px;
+    max-width: 100%;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+.bg-white.rounded-lg.shadow-lg {
+    margin: 20px auto;
+    width: 95%;
+    max-width: 95%;
+    padding: 15px;
+    height: auto;
+  }
+  .banner{
+    position: relative;
+    align-items: center;
+  }
+
+  .request_button {
+    width: 90%;
+    font-size: 18px;
+    padding: 10px 0;
+    margin: 10px auto;
+    align-items: center;
+  }
+
+  .title_banner {
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top:0;
+  }
+  
+  .tab-btn {
+  font-size: 16px !important;
+  padding: 8px 0 !important;
+}
+ 
+ .center_notify {
+    position: relative !important;
+    top: auto !important;
+    margin: 0 auto;
+    width: 95% !important;
+  }
+
+  .center_notify {
+    margin-top: 1px;
+    height: auto;
+    padding: 10px;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  } 
+  .main_body, 
+
+  .card_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 50%;
+    margin: 30px 0;
+  }
+
+  .card h3 {
+    font-size: 20px;
+    margin-top: 220px;
+  }
+
+  .card img {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
 }
 

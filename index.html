@@ -9,22 +9,52 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Comfortaa:wght@300..700&family=Michroma&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     </head>
     <body >
         <div>
             <div class="img">
                 <div class="w-full">
                     <div class="bg-gradient-to-b from-[#002d72] via-[#002d72] to-transparent">
-                        <div class="mobile-menu">
-                            <span></span>
+                        <div class="md:hidden">
+                            <div class="md:hidden justify-start flex items-center justify-between px-4 py-3 bg-transparent">
+                                
+                                <button id="menu-toggle" class="text-white">
+                                <!-- Hamburger Icon -->
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M4 6h16M4 12h16M4 18h16"/>
+                                    </svg>
+                                </button>
+                                <a href="/">
+                                    <img src="https://www.zim.com/assets/g0mbdksc/zim80-logo-313x112-white.png?v=1dbd885c4363b20" height="40" width="160" class="ml-[20px]">
+                                </a>
+                            </div>
+                            <div id="mobile-menu" class="md:hidden hidden flex-col px-4 py-4 bg-white text-blue-900 font-semibold space-y-2">
+                                <a href="#">ZIM</a>
+                                <a href="#">Contact Us</a>
+                                <a href="#">Careers</a>
+                                <a href="#">Investors</a>
+                                <a href="#">Customer Updates</a>
+                            </div>
+                            <div calss="items-right">
+                                <div role="button" class="mob_button_text">
+                                    <label for="toggle" class="dropdown-label">
+                                        I Need
+                                        <img id="myimg" src="asset\down-arrow2-svgrepo-com (1).svg" alt="Tap to Rotate">
+                                    </label>     
+                                </div>
+                            </div>
+                            <div class="mob_search">
+                                <img class="zoom" src="data:image/svg+xml,%3csvg%20width='31'%20height='31'%20viewBox='0%200%2031%2031'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.13867%2026.068C6.65502%2023.0698%208.62881%2020.5713%2011.3105%2019.3304'%20stroke='white'%20stroke-width='2'%20stroke-miterlimit='10'/%3e%3cpath%20d='M19.0059%2019.3304C19.9886%2019.7885%2020.8797%2020.4131%2021.6376%2021.171C22.9451%2022.4785%2023.8529%2024.1691%2024.1777%2026.068'%20stroke='white'%20stroke-width='2'%20stroke-miterlimit='10'/%3e%3cpath%20d='M15.158%2029.316C22.9772%2029.316%2029.316%2022.9772%2029.316%2015.158C29.316%207.33875%2022.9772%201%2015.158%201C7.33875%201%201%207.33875%201%2015.158C1%2022.9772%207.33875%2029.316%2015.158%2029.316Z'%20stroke='white'%20stroke-width='2'%20stroke-miterlimit='10'/%3e%3cpath%20d='M15.1579%2020.9877C18.3776%2020.9877%2020.9876%2018.0048%2020.9876%2014.3251C20.9876%2010.6455%2018.3776%207.66257%2015.1579%207.66257C11.9382%207.66257%209.32812%2010.6455%209.32812%2014.3251C9.32812%2018.0048%2011.9382%2020.9877%2015.1579%2020.9877Z'%20stroke='white'%20stroke-width='2'%20stroke-miterlimit='10'/%3e%3c/svg%3e" width="28" height="28">
+                            </div>
                         </div>
                         <div class="[padding-Left:25px] [padding-Right:25px] flex h-full bg-transparent relative">
                             <div class="nav_logo">
                                 <a href="/">
-                                    <img src="https://www.zim.com/assets/f4ln4see/logo80-tablets-light-200x112.png?v=1dbd9195eeea6f0" width="auto" height="auto">
+                                    <img src="https://www.zim.com/assets/f4ln4see/logo80-tablets-light-200x112.png?v=1dbd9195eeea6f0" width="auto" height="auto" class="hidden md:flex ">
                                 </a>
                             </div>
-                            <div class="flex flex-1 flex-col">
+                            <div class="hidden md:flex flex-1 flex-col">
                                 <nav class="nav_top">
                                     <a class="nav_link" href="#">ZIM</a>
                                     <a class="nav_link" href="#">Contact Us</a>
@@ -157,47 +187,63 @@
                 </div>
             </div>
             <div class="main_body">
-                <div class="h-[100px] w-full"></div>
-                <div>
-                    <div class="m-[0 30px] relative flex h-[670px]">
-                        <div class="card_container">
-                            <div class="card">
-                                    <figure>
-                                    <img src="asset\card1.png" >
-                                    </figure>
-                                    <figcaption>
-                                    <h3 class="justify-end mt-[350px] text-[32px] font-bold text-blue-900 font-['Michroma', sans-serif] m-4">Explore ZIM’s company culture and job opportunities. </h3>
-                                    <a href="#" class="m-4">Read More</a>
-                                    </figcaption>
+                <div class="h-[80px] w-full"></div>
+                <div class="wrapper">
+                    <ul class="carousel">
+                        <li class="card">
+                            
+                            <div><img src="asset\card1.png" >
+                                <h3 class="justify-end text-[32px] mt-[250px] font-bold text-blue-900 font-['Michroma', sans-serif] m-4">Explore ZIM’s company culture and job opportunities. </h3>
+                                <a href="#" class="m-4">Read More</a>
                             </div>
-                            <div class="card">
-                                    <figure>
-                                    <img src="asset\card2.png" >
-                                    </figure>
-                                    <figcaption>
-                                    <h3 class="justify-end mt-[350px] text-[32px] font-bold text-blue-900 font-['Michroma', sans-serif] m-4">Quotes and bookings are now available with a single sign-in!</h3>
-                                    <a href="#" class="m-4">Read More</a>
-                                    </figcaption>
+                        </li>
+                        <li class="card">
+                            <img src="asset\card2.png" >
+                            <div>
+                                <h3 class="justify-end mt-[250px] text-[32px] font-bold text-blue-900 font-['Michroma', sans-serif] m-4">Quotes and bookings are now available with a single sign-in!</h3>
+                                <a href="#" class="m-4">Read More</a>
                             </div>
-                            <div class="card">
-                                    <figure>
-                                    <img src="asset\card3.png" >
-                                    </figure>
-                                    <figcaption>
-                                    <h3 class="justify-end mt-[350px] text-[32px] font-bold text-blue-900 font-['Michroma', sans-serif] m-4">Access your shipment details immediately after vessel departure.</h3>
-                                    <a href="#" class="m-4">Read More</a>
-                                    </figcaption>
+                        </li>
+                        <li class="card">
+                            <img src="asset\card3.png" >
+                            <div>
+                                <h3 class="justify-end mt-[250px] text-[32px] font-bold text-blue-900 font-['Michroma', sans-serif] m-4">Access your shipment details immediately after vessel departure.</h3>
+                                <a href="#" class="m-4">Read More</a>
                             </div>
-                        </div>
+                        </li>
+                        <li class="card">
+                            <img src="asset\card4.png" >
+                            <div>
+                                <h3 class="justify-end mt-[250px] text-[32px] font-bold text-blue-900 font-['Michroma', sans-serif] m-4">Explore ZIM’s company culture and job opportunities. </h3>
+                                <a href="#" class="m-4">Read More</a>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <img src="asset\card5.png" >
+                            <div>
+                                <h3 class="justify-end mt-[250px] text-[32px] font-bold text-blue-900 font-['Michroma', sans-serif] m-4">Explore ZIM’s company culture and job opportunities. </h3>
+                                <a href="#" class="m-4">Read More</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <i id="left" class="fa-solid fas fa-angle-left"></i>
+                    <i id="right" class="fa-solid fas fa-angle-right"></i>
                     </div>
+                </div>
+                <div class="h-[80px] w-full">
+                    cargo
                 </div>
             </div>
             <div class="center_notify">
-                    <div class="flex items-center gap-4 mt-4">
-                        <span class="text-blue-900 font-bold whitespace-nowrap text-[20px] ml-[3px]">15 JUN 2025</span>
-                        <div class="border-l h-5 border-gray-400"></div>
-                        <span class="font-semibold text-black whitespace-nowrap text-[19px] font-[Assistant, sans-serif]">Israel war situation update</span>
-                    <a href="#" class="text-blue-900 font-bold underline hover:text-blue-950 whitespace-nowrap ml-[60%] text-sm">Show More</a>
+                <div class="flex items-center gap-4 mt-4">
+                    <div class="news-ticker">
+                        <div id="news-box" class="news-box">
+                            <div class="news-item" id="news-content">
+                                <span class="date">11 JUN 2025</span><a href="#"> | NBF (New Bunker Factor*) update </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="text-blue-900 font-bold underline hover:text-blue-950 whitespace-nowrap mr-[10px] text-sm">Show More</a>
                 </div>       
             </div>
         </div>
